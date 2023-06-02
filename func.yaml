@@ -1,0 +1,15 @@
+specVersion: 0.35.0
+name: picalcgo
+runtime: go
+registry: quay.io/tofuatwork
+image: quay.io/tofuatwork/picalcgo:latest
+imageDigest: sha256:ea7b236c0548bad3639d9a6aa3dde1188c389eab0e724d94a02ea7751f82b4d5
+created: 2023-06-02T19:33:18.578154975+02:00
+build:
+  buildpacks:
+  - paketo-buildpacks/go-dist
+  - ghcr.io/boson-project/go-function-buildpack:tip
+  builder: pack
+  pvcSize: 256Mi
+deploy:
+  namespace: default
